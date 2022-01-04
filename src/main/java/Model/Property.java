@@ -6,26 +6,29 @@ import java.awt.*;
 
 public class Property extends Field {
 
-    protected int rent;
+    protected int price;
+    protected int[] rent;
     protected Player owner;
     protected Color color;
+    protected int hotel = 0;
 
     /**
      * Constructor
      * @param field
-     * @param rent
+     * @param price
      * @param name
      * @param color
      */
 
     // Constructor
-    public Property(GUI_Street field, int rent, String name, Color color) {
+    public Property(GUI_Street field, int price, int[] rent, String name, Color color) {
         field.setTitle(name);
         field.setBackGroundColor(color);
-        field.setSubText("$" + rent);
+        field.setSubText("$" + price);
         field.setDescription("My description");
 
         this.field = field;
+        this.price = price;
         this.rent = rent;
         this.name = name;
         this.color = color;
@@ -33,7 +36,10 @@ public class Property extends Field {
 
     // Methods
     public int getRent() {
-        return rent;
+        return rent[hotel];
+    }
+    public void buildHouse() {
+        hotel++;
     }
     public void setOwner(Player player) {
         this.owner = player;
