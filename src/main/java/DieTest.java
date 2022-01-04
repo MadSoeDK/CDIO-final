@@ -2,6 +2,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class DieTest {
 
+    /**
+     * Test der tester hyppigheden af slag fra 1-6 over 50000 kast.
+     * Testen skal gerne give omkring 16,5% for hvert tal.
+     */
     @org.junit.jupiter.api.Test
     void getFacevalue() {
         Die die = new Die(1);
