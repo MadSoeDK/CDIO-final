@@ -6,6 +6,7 @@ import java.awt.*;
 
 public class Property extends Field {
 
+    protected int price;
     protected int rent;
     protected Player owner;
     protected Color color;
