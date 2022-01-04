@@ -3,15 +3,15 @@ import static org.junit.jupiter.api.Assertions.*;
 class DieTest {
 
     /**
-     * Test der tester hyppigheden af slag fra 1-6 over 50000 kast.
-     * Testen skal gerne give omkring 16,5% for hvert tal.
+     * Test that tests the frequency of values from 1-6 from 50000 rolls.
+     * The test should give around 16,5% for each values frequency.
      */
     @org.junit.jupiter.api.Test
     void getFacevalue() {
-        Die die = new Die(1);
+        Cup cup = new Cup();
         float[] counter = new float[6];
         for (int i = 0; i < 50000; i++) {
-            int facevalue = die.getFacevalue();
+            int facevalue = cup.getSum();
             switch (facevalue) {
                 case 1:
                     counter[0]++;

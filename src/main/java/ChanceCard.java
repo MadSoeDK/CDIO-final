@@ -12,6 +12,7 @@ public abstract class ChanceCard {
         this.card = card;
     }
     public abstract int getCard();
+
     public void shuffleCard() {
         //Method that shuffles cards.
         Random r = new Random();
